@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<title></title>
+ 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" >
+ 	<script type="text/javascript" src="jquery-2.1.1.js"></script>
+ 	<style type="text/css">
+ 	*{padding:0;
+ 	  margin:0;}
+ 	html{
+ 		font-family:微软雅黑;
+ 	}
+ 	p,a{
+ 		text-decoration:none;
+ 		display:inline-block;
+ 		text-align:center;
+ 		width:100%;
+ 		color:white;
+ 		cursor:pointer;
+ 	}
+ 	#Calculator{
+ 	    width:300px;
+ 	    height:450px;
+ 	    margin:auto;
+ 	    margin-top:30px;
+ 	    border:2px #239494 solid;
+ 	}
+ 	.result{
+ 		height:70px;
+ 		width:90%;
+ 		margin-left:5%;
+ 		margin-top:10px;
+ 		border:1px #239494 solid;
+ 		text-align:right;
+ 		line-height:70px;
+ 		color:#239494;
+ 		font-size:20px;
+ 		padding-right:10px;
+ 	}
+ 	#Calculator form{
+ 		width:90%;
+ 		margin-left:5%;
+ 		margin-top:20px;
+ 		border:1px #239494 solid;
+ 		height:auto;
+ 	}
+ 	#Calculator form tr,#Calculator form table{
+ 		width:100%;
+ 	}
+ 	#Calculator form tr{
+ 		height:60px;
+ 		background:#239494;
+ 		color:white;
+ 	}
+ 	#Calculator form .td_nu1{
+ 		width:75%;
+ 	}
+ 	#Calculator form .td_nu2{
+ 		width:25%;
+ 	}
+ 	</style>
+ 	<script type="text/javascript">
+ 	$(function(){
+ 		$('#Calculator form table tr td p').click(function(){
+ 			var re = $(this).text();
+ 			$('#Calculator .result').text($('#Calculator .result').text()+re);
+ 		})
+ 	})
+
+
+ 	</script>
+ </head>
+ <body>
+ 	<div id="Calculator">
+ 		<p class="result"></p>
+ 		<form method="post" action="calculator_1.php" >
+ 			<table>
+ 				<tr>
+ 					<td colspan="3" class="td_nu1"></td>
+ 					<td class="delete"><a href=""  >删除</a></td>
+ 				</tr>
+ 				<tr>
+ 					<td >
+ 					<p href="" name="number" value="7">7</p></td>
+ 					<td >
+ 					<p href="" name="number" value="8">8</p></td>
+ 					<td >
+ 					<p href="" name="number" value="9">9</p></td>
+ 					<td >
+ 					<p href="" name="count" value="/">/</p></td>
+ 				</tr>
+ 				<tr>
+ 					<td >
+ 					<p href="" name="number" value="4">4</p></td>
+ 					<td >
+ 					<p href="" name="number" value="5">5</p></td>
+ 					<td >
+ 					<p href="" name="number" value="6">6</p></td>
+ 					<td >
+ 					<p href="" name="count" value="*">*</p></td>
+ 				</tr>
+ 				<tr>
+ 					<td >
+ 					<p href="" name="number" value="1">1</p></td>
+ 					<td >
+ 					<p href="" name="number" value="2">2</p></td>
+ 					<td >
+ 					<p href="" name="number" value="3">3</p></td>
+ 					<td >
+ 					<p href="" name="count" value="-">-</p></td>
+ 				</tr>
+ 				<tr>
+ 					<td >
+ 					<p href="" name="number" value=".">.</p></td>
+ 					<td >
+ 					<p href="" name="number" value="0">0</p></td>
+ 					<td >
+ 					<p href="" name="count" value="=">=</p></td>
+ 					<td >
+ 					<p href="" name="count" value="+">+</p></td>
+ 				</tr>
+
+ 			</table>
+ 		</form>
+ 	</div>
+ </body>
+ </html>
